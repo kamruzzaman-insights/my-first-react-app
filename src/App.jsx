@@ -1,11 +1,15 @@
 import './App.css'
+import Todo from './Todo';
 
 function App() {
 
   return (
     <>
       <h1>React Core Concepts</h1>
-      <Student></Student>
+      <Todo task="learn react" isDone={true}></Todo>
+      <Todo task="shower" isDone={false}></Todo>
+      <Todo task="roja" isDone={true}></Todo>
+      {/* <Student></Student>
       <Student></Student>
       <Student></Student>
       <Person></Person>
@@ -16,7 +20,7 @@ function App() {
       <Player name="hasib" runs="5000"></Player>
       <Player name="mushfiq" runs="5000"></Player>
       <Salami event="roja" hadia="1000"></Salami>
-      <Salami event="graduation" hadia="2000"></Salami>
+      <Salami event="graduation" hadia="2000"></Salami> */}
     </>
   )
 }

@@ -1,0 +1,10 @@
+.todo {
+    border: 2px solid green;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+li {
+    list-style-type: none;
+}
