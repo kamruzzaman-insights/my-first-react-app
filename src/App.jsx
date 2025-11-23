@@ -1,14 +1,39 @@
-import './App.css'
+import './App.css';
 import Todo from './Todo';
+import Brother from './Brother';
+import Stupid from './Stupid';
+
 
 function App() {
+  const brothers = ['anik', 'shariful', 'nahid', 'shariful', 'mazed', 'joy'];
+
+  const stupids = [
+    { id: 1, name: 'Dr. Mahfuz', age: 68 },
+    { id: 2, name: 'Sudaru Younus', age: 80 },
+    { id: 3, name: 'Potita Sharmin', age: 62 },
+    { id: 4, name: 'Stupid Rizoana', age: 70 },
+  ];
+
 
   return (
     <>
       <h1>React Core Concepts</h1>
-      <Todo task="learn react" isDone={true}></Todo>
+
+
+      {
+        stupids.map(stupid => <Stupid key= {stupid.id} stupid={stupid}></Stupid>)
+      }
+
+      {
+        brothers.map(brother => <Brother brother={brother} married={false} ></Brother>)
+      }
+
+
+
+
+      {/* <Todo task="learn react" isDone={true}></Todo>
       <Todo task="shower" isDone={false}></Todo>
-      <Todo task="roja" isDone={true}></Todo>
+      <Todo task="roja" isDone={true}></Todo> */}
       {/* <Student></Student>
       <Student></Student>
       <Student></Student>
@@ -25,8 +50,8 @@ function App() {
   )
 }
 
-function Salami({event, hadia}) {
-  return(
+function Salami({ event, hadia }) {
+  return (
     <div className='student'>
       <p>Salami for id: {event}</p>
       <p>Amount: {hadia}</p>
@@ -34,8 +59,8 @@ function Salami({event, hadia}) {
   )
 }
 
-function Player({name, runs}) {
-  return(
+function Player({ name, runs }) {
+  return (
     <div className='student'>
       <h3>Name: {name} </h3>
       <p>Runs: {runs} </p>
@@ -45,7 +70,7 @@ function Player({name, runs}) {
 
 function Developer(props) {
   console.log(props);
-  return(
+  return (
     <div style={{
       border: '2px solid red',
       borderRadius: '10px',
@@ -59,7 +84,7 @@ function Developer(props) {
 }
 
 function Student() {
-  return(
+  return (
     <div className='student'>
       <p>Name: </p>
       <p>Dept: </p>
@@ -76,7 +101,7 @@ function Person() {
     fontSize: '2.5rem'
   }
 
-  return(
+  return (
     <div>
       <p style={personStyle}>I am a person: {age} {name} </p>
     </div>
